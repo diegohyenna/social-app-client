@@ -3,7 +3,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import propTypes from "prop-types";
 import MyButton from "../util/MyButton";
 
-import { deleteScream } from "../redux/actions/dataAction";
+import { deleteScream, getScreams } from "../redux/actions/dataAction";
 import { connect } from "react-redux";
 
 import DeleteOutline from "@material-ui/icons/DeleteOutline";
@@ -40,6 +40,7 @@ class DeleteScream extends Component {
       open: false,
     });
   };
+
   render() {
     const { classes } = this.props;
 
@@ -79,6 +80,6 @@ DeleteScream.propTypes = {
   screamId: propTypes.string.isRequired,
 };
 
-export default connect(null, { deleteScream })(
+export default connect(null, { deleteScream, getScreams })(
   withStyles(styles)(DeleteScream)
 );

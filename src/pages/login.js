@@ -18,7 +18,35 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginUser } from "../redux/actions/userAction";
 
-const styles = theme;
+const styles = (theme) => ({
+  form: {
+    textAlign: "center",
+  },
+  image: {
+    margin: "20px auto 20px auto",
+  },
+  pageTitle: {
+    margin: "10px auto 10px auto",
+  },
+  textField: {
+    margin: "10px auto 10px auto",
+  },
+  button: {
+    marginTop: 20,
+    position: "relative",
+  },
+  customError: {
+    color: "red",
+    fontSize: "0.8rem",
+    marginTop: "10",
+  },
+  progress: {
+    position: "absolute",
+  },
+  progressSpinner: {
+    position: "absolute",
+  },
+});
 
 class login extends Component {
   constructor() {
@@ -120,8 +148,9 @@ class login extends Component {
               color="primary"
               className={classes.button}
               fullWidth
+              disabled={loading}
             >
-              {!loading ? "Entrar" : "."}
+              Entrar
               {loading && (
                 <CircularProgress
                   size={30}
