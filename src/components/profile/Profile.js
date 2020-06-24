@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import MuiLink from "@material-ui/core/Link";
 
-import { Paper, Typography, IconButton, Tooltip } from "@material-ui/core";
+import { Paper, Typography } from "@material-ui/core";
 import CalenderToday from "@material-ui/icons/CalendarToday";
 import LinkIcon from "@material-ui/icons/Link";
 import LocationOn from "@material-ui/icons/LocationOn";
@@ -17,10 +17,10 @@ import KeyboardReturn from "@material-ui/icons/KeyboardReturn";
 import dayjs from "dayjs";
 
 import { connect } from "react-redux";
-import { logoutUser, uploadImage } from "../redux/actions/userAction";
+import { logoutUser, uploadImage } from "../../redux/actions/userAction";
 
 import EditDetails from "./EditDetails";
-import MyButton from "../util/MyButton";
+import MyButton from "../../util/MyButton";
 
 const styles = (theme) => ({
   paper: {

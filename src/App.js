@@ -12,8 +12,9 @@ import { logoutUser, getUserData } from "./redux/actions/userAction";
 import home from "./pages/home";
 import login from "./pages/login";
 import signup from "./pages/signup";
+import user from "./pages/user";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
 import AuthRoute from "./util/AuthRoute";
 
 import "./App.css";
@@ -24,6 +25,9 @@ import Axios from "axios";
 import dayjs from "dayjs";
 
 const theme = createMuiTheme(themeFile);
+
+Axios.defaults.baseURL =
+  "https://us-central1-social-app-32027.cloudfunctions.net/api";
 
 const token = localStorage.getItem("FBIdToken");
 if (token) {
@@ -39,7 +43,7 @@ if (token) {
 }
 
 function App() {
-  dayjs.locale('pt-br')
+  dayjs.locale("pt-br");
   return (
     <MuiThemeProvider theme={theme}>
       <Provider store={store}>
@@ -50,6 +54,12 @@ function App() {
               <Route exact path="/" component={home}></Route>
               <AuthRoute exact path="/login" component={login}></AuthRoute>
               <AuthRoute exact path="/signup" component={signup}></AuthRoute>
+              <Route exact path="/users/:handle" component={user}></Route>
+              <Route
+                exact
+                path="/users/:handle/scream/:screamId"
+                component={user}
+              ></Route>
             </Switch>
           </div>
         </Router>

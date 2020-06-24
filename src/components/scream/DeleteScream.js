@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import propTypes from "prop-types";
-import MyButton from "../util/MyButton";
+import MyButton from "../../util/MyButton";
 
-import { deleteScream, getScreams } from "../redux/actions/dataAction";
+import { deleteScream, getScreams } from "../../redux/actions/dataAction";
 import { connect } from "react-redux";
 
 import DeleteOutline from "@material-ui/icons/DeleteOutline";

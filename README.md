@@ -12,7 +12,6 @@ Um projeto feito para estudos com React e Redux.
 - React DOM
 - Redux
 - React Router DOM
-- Redux Thunk
 
 ### Demonstração
 

@@ -3,11 +3,9 @@ import propTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 import { connect } from "react-redux";
-import { editUserDetails } from "../redux/actions/userAction";
+import { editUserDetails } from "../../redux/actions/userAction";
 
 import {
-  Tooltip,
-  IconButton,
   Dialog,
   DialogTitle,
   DialogContent,
@@ -17,7 +15,7 @@ import {
 } from "@material-ui/core";
 
 import EditIcon from "@material-ui/icons/Edit";
-import MyButton from "../util/MyButton";
+import MyButton from "../../util/MyButton";
 
 const styles = (theme) => ({
   //   ...theme,
