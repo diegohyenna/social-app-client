@@ -15,14 +15,12 @@ const reducers = combineReducers({
   UI: uiReducer,
 });
 
-const reduxDevTools =
-  window.navigator.appVersion.indexOf("OPR") === -1
-    ? compose(
-        applyMiddleware(...middleware),
-        window.__REDUX_DEVTOOLS_EXTENSION__ &&
-          window.__REDUX_DEVTOOLS_EXTENSION__()
-      )
-    : compose(applyMiddleware(...middleware));
+// const reduxDevTools = compose(
+//   applyMiddleware(...middleware),
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// )
+
+const reduxDevTools = compose(applyMiddleware(...middleware));
 
 const store = createStore(reducers, initialState, reduxDevTools);
 

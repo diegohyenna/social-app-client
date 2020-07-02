@@ -26,8 +26,7 @@ import dayjs from "dayjs";
 
 const theme = createMuiTheme(themeFile);
 
-Axios.defaults.baseURL =
-  "https://us-central1-social-app-32027.cloudfunctions.net/api";
+Axios.defaults.baseURL = "https://us-central1-social-app-32027.cloudfunctions.net/api";
 
 const token = localStorage.getItem("FBIdToken");
 if (token) {
